@@ -102,5 +102,12 @@
       }
     ],
     "trimWhitespace": true
+  },
+  "applicationRelease": {
+    "name": "Regram",
+    "version": "13.2",
+    "build": 34661,
+    "sourceCommit": "0d4d12fbce1cd3c63abaef904fdc22b01875eff2",
+    "url": "https://github.com/RegramDev/Regram-ios/releases/tag/v13.2-b34661"
   }
 }

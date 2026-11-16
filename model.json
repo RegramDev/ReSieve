@@ -1,0 +1,105 @@
+{
+  "name": "ReSieve",
+  "version": "1.0.0",
+  "sourceModelVersion": "2026-11-16.9",
+  "architecture": "MiniRBT-H256-6L",
+  "parameters": 10345730,
+  "languages": [
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "labels": [
+    "content",
+    "promotion"
+  ],
+  "threshold": 0.962,
+  "sequenceLength": 128,
+  "overlapTokens": 16,
+  "maximumTokens": 1024,
+  "maximumWindows": 8,
+  "maximumInputUTF16Units": 8192,
+  "minimumNormalizedGraphemes": 4,
+  "aggregation": "minimum_window_probability",
+  "coreml": {
+    "file": "ReSieve.mlmodel",
+    "sha256": "239500a96c527296cd84d8623a72767be1abdb844ae69b0c8811e34a4e0950aa",
+    "bytes": 20571001,
+    "weightBits": 16,
+    "computeUnits": "CPU_ONLY",
+    "inputs": {
+      "input_ids": {
+        "dtype": "int32",
+        "shape": [
+          1,
+          128
+        ]
+      },
+      "attention_mask": {
+        "dtype": "int32",
+        "shape": [
+          1,
+          128
+        ]
+      }
+    },
+    "output": {
+      "name": "probabilities",
+      "order": [
+        "content",
+        "promotion"
+      ]
+    }
+  },
+  "pytorch": {
+    "file": "model.safetensors",
+    "sha256": "d0ab11dfa725279f05578d9fb74aeba5bb183678f639efb30eef06f76b177213",
+    "bytes": 41394928,
+    "weightBits": 32
+  },
+  "vocabulary": {
+    "file": "vocab.txt",
+    "sha256": "45bbac6b341c319adc98a532532882e91a9cefc0329aa57bac9ae761c27b291c",
+    "tokens": 21128
+  },
+  "applicationBaseline": {
+    "name": "Regram",
+    "version": "13.2",
+    "build": 34659,
+    "sourceCommit": "29a49d15e17644e1048cd0c9f94eda0d5ebb5e53"
+  },
+  "scope": "Text-score classifier. App span selection, structural rules, entity preservation, media handling, and personal corrections are separate.",
+  "normalization": {
+    "unicodeForm": "NFKC",
+    "lowercase": true,
+    "removeUnicodeCategories": [
+      "Cf",
+      "Mn",
+      "Me",
+      "So",
+      "Sk"
+    ],
+    "orderedRegexReplacements": [
+      {
+        "pattern": "https?://[^\\s<>]+|(?:t\\.me|telegram\\.me)/[^\\s<>]+",
+        "replacement": " 链接 "
+      },
+      {
+        "pattern": "@[a-zA-Z0-9_]{1,32}",
+        "replacement": " 用户 "
+      },
+      {
+        "pattern": "[0-9]{5,}",
+        "replacement": " 数字 "
+      },
+      {
+        "pattern": "(?<=[\\u3400-\\u9fff])\\s+(?=[\\u3400-\\u9fff])",
+        "replacement": ""
+      },
+      {
+        "pattern": "\\s+",
+        "replacement": " "
+      }
+    ],
+    "trimWhitespace": true
+  }
+}

@@ -1,0 +1,13 @@
+# Keep local experiments and account data out of the model repository.
+build-input/
+data/
+private/
+.venv/
+__pycache__/
+*.py[cod]
+*.csv
+*.jsonl
+*.ipa
+*.p12
+*.mobileprovision
+.DS_Store

@@ -1,0 +1,40 @@
+{
+  "name": "ReSieve",
+  "version": "1.0.0",
+  "base": {
+    "repository": "https://huggingface.co/hfl/minirbt-h256",
+    "revision": "446e1b4012b10946f479563005700c54c9db3f7c",
+    "license": "Apache-2.0",
+    "licenseURL": "https://github.com/iflytek/MiniRBT/blob/main/LICENSE",
+    "parameters": 10345730,
+    "weightsSHA256": "6728ca573fd5197f28198eb7e6119a76e4d5dc626f953fca8c0dc5ba2798f9fc"
+  },
+  "publicSources": [
+    {
+      "repository": "https://github.com/Olivi-9/Chinese-Spam-Dataset",
+      "revision": "952edf821038511b1acb3cac549a8b7c6303907b",
+      "file": "train.csv",
+      "sha256": "68c8463752c4b3180d519b7424b7eb49fb6b396d32ebd1434bdc46bcb893f545",
+      "usage": "text/label only; malformed rows excluded",
+      "license": "No explicit dataset license located; raw data not redistributed."
+    },
+    {
+      "repository": "https://github.com/ramsayleung/bayes_spam_sniper",
+      "revision": "f685165f4cf92deac34c7904f552639b805e29da",
+      "file": "db/data/db_migration_data.csv",
+      "sha256": "0aa633116201791c09d29da67d5b1f1aacad3892ce9719a9ddee8bf05632e6c7",
+      "usage": "Only message_content ham/spam marked by admin_dashboard/group_admin; identifiers excluded",
+      "license": "No explicit dataset license located; raw data not redistributed."
+    },
+    {
+      "repository": "https://github.com/jasonbitsmith/tg-ad-guard-bot",
+      "revision": "31c66c395520ca35e71db94152c92e76ce32aae7",
+      "file": "test/unit.test.js",
+      "sha256": "1687709acbec712c25c75af61f39ac42304dc14bb2fe0cc677f26040321b70a8",
+      "usage": "87 development probes relabeled for promotional intent, including preserving anti-fraud discussion. No raw text redistributed or directly trained.",
+      "license": "No explicit dataset license located."
+    }
+  ],
+  "privateAdaptation": "Independently reviewed local device examples and authored contrasts contributed to adaptation. Raw messages, private annotations, training splits, and optimizer state are excluded. Exact training reproduction requires those non-distributed inputs.",
+  "scopeOfLicense": "The license covers the distributed model weights and documentation, subject to upstream notices. It does not relicense source datasets; no raw corpus is included."
+}

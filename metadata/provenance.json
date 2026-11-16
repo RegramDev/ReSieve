@@ -1,13 +1,18 @@
 {
   "name": "ReSieve",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "base": {
     "repository": "https://huggingface.co/hfl/minirbt-h256",
     "revision": "446e1b4012b10946f479563005700c54c9db3f7c",
     "license": "Apache-2.0",
     "licenseURL": "https://github.com/iflytek/MiniRBT/blob/main/LICENSE",
     "parameters": 10345730,
-    "weightsSHA256": "6728ca573fd5197f28198eb7e6119a76e4d5dc626f953fca8c0dc5ba2798f9fc"
+    "weightsSHA256": "6728ca573fd5197f28198eb7e6119a76e4d5dc626f953fca8c0dc5ba2798f9fc",
+    "localDocumentation": "references/minirbt.md",
+    "localLicense": "references/MiniRBT-LICENSE",
+    "localModelCard": "references/minirbt-model-card.md",
+    "documentationRevision": "baef787a1cee4fdc4051083943a460807e7b8a86",
+    "localLicenseSHA256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
   },
   "publicSources": [
     {
@@ -16,7 +21,8 @@
       "file": "train.csv",
       "sha256": "68c8463752c4b3180d519b7424b7eb49fb6b396d32ebd1434bdc46bcb893f545",
       "usage": "text/label only; malformed rows excluded",
-      "license": "No explicit dataset license located; raw data not redistributed."
+      "license": "No explicit dataset license located; raw data not redistributed.",
+      "localDocumentation": "references/chinese-spam-dataset.md"
     },
     {
       "repository": "https://github.com/ramsayleung/bayes_spam_sniper",
@@ -24,7 +30,8 @@
       "file": "db/data/db_migration_data.csv",
       "sha256": "0aa633116201791c09d29da67d5b1f1aacad3892ce9719a9ddee8bf05632e6c7",
       "usage": "Only message_content ham/spam marked by admin_dashboard/group_admin; identifiers excluded",
-      "license": "No explicit dataset license located; raw data not redistributed."
+      "license": "No explicit dataset license located; raw data not redistributed.",
+      "localDocumentation": "references/bayes-spam-sniper.md"
     },
     {
       "repository": "https://github.com/jasonbitsmith/tg-ad-guard-bot",
@@ -32,9 +39,26 @@
       "file": "test/unit.test.js",
       "sha256": "1687709acbec712c25c75af61f39ac42304dc14bb2fe0cc677f26040321b70a8",
       "usage": "87 development probes relabeled for promotional intent, including preserving anti-fraud discussion. No raw text redistributed or directly trained.",
-      "license": "No explicit dataset license located."
+      "license": "No explicit dataset license located.",
+      "localDocumentation": "references/tg-ad-guard-bot.md"
     }
   ],
   "privateAdaptation": "Independently reviewed local device examples and authored contrasts contributed to adaptation. Raw messages, private annotations, training splits, and optimizer state are excluded. Exact training reproduction requires those non-distributed inputs.",
-  "scopeOfLicense": "The license covers the distributed model weights and documentation, subject to upstream notices. It does not relicense source datasets; no raw corpus is included."
+  "scopeOfLicense": "The license covers the distributed model weights and documentation, subject to upstream notices. It does not relicense source datasets; no raw corpus is included.",
+  "sourceModelVersion": "2026-11-16.10",
+  "adaptation": {
+    "previousVersion": "1.0.0",
+    "previousCoreMLSHA256": "239500a96c527296cd84d8623a72767be1abdb844ae69b0c8811e34a4e0950aa",
+    "selectedStage": 37,
+    "selectedEpoch": 2,
+    "selectedStageLearningRate": 1e-06,
+    "augmentedRows": 11415,
+    "replayRows": 7899,
+    "nativeWindows": 170,
+    "countsMeaning": "Augmented rows include repeated, weighted, simplified/traditional and windowed views; not independent messages.",
+    "evaluation": "docs/evaluation.md",
+    "applicationSourceCommit": "a45b58b32311340239d918b40a0877f0cc79fd8e",
+    "coreMLSHA256": "317fb694c4d81160af90ffeb87ceedc8e5f6e120442f3105b1b0ddcd90e31b49",
+    "pytorchSHA256": "61d26331428638cbcc32863f908bb68edad30446eb057efe092a8c187670db17"
+  }
 }

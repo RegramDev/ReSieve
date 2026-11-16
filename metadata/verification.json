@@ -1,0 +1,14 @@
+{
+  "version": "1.1.0",
+  "vectors": 100,
+  "windowCases": 12,
+  "maximumConversionError": 0.004074990749359131,
+  "maximumReferenceError": 0.0,
+  "parameters": 10345730,
+  "threshold": 0.99164,
+  "offlineLoads": true,
+  "rawSamplesDistributed": false,
+  "coreMLSHA256": "317fb694c4d81160af90ffeb87ceedc8e5f6e120442f3105b1b0ddcd90e31b49",
+  "pytorchSHA256": "61d26331428638cbcc32863f908bb68edad30446eb057efe092a8c187670db17",
+  "localMarkdownLinksVerified": true
+}

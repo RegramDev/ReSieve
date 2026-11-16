@@ -1,0 +1,7 @@
+{
+  "name": "ReSieve",
+  "provenance": "../metadata/provenance.json",
+  "sourceDocumentation": "../references/README.md",
+  "baseLicense": "../references/MiniRBT-LICENSE",
+  "notice": "../NOTICE"
+}

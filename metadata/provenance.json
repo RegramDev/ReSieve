@@ -1,6 +1,6 @@
 {
   "name": "ReSieve",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "base": {
     "repository": "https://huggingface.co/hfl/minirbt-h256",
     "revision": "446e1b4012b10946f479563005700c54c9db3f7c",
@@ -45,20 +45,20 @@
   ],
   "privateAdaptation": "Independently reviewed local device examples and authored contrasts contributed to adaptation. Raw messages, private annotations, training splits, and optimizer state are excluded. Exact training reproduction requires those non-distributed inputs.",
   "scopeOfLicense": "The license covers the distributed model weights and documentation, subject to upstream notices. It does not relicense source datasets; no raw corpus is included.",
-  "sourceModelVersion": "2026-11-16.10",
+  "sourceModelVersion": "2026-11-18.2",
   "adaptation": {
-    "previousVersion": "1.0.0",
-    "previousCoreMLSHA256": "239500a96c527296cd84d8623a72767be1abdb844ae69b0c8811e34a4e0950aa",
-    "selectedStage": 37,
-    "selectedEpoch": 2,
-    "selectedStageLearningRate": 1e-06,
-    "augmentedRows": 11415,
+    "previousVersion": "1.2.0",
+    "previousCoreMLSHA256": "b05403d4c7e716a20afecbbfb78c3201a94365ff4630e998c0d358c74ea31ba8",
+    "selectedStage": "39e",
+    "selectedEpoch": 1,
+    "selectedStageLearningRate": 2.5e-06,
+    "augmentedRows": 12502,
     "replayRows": 7899,
-    "nativeWindows": 170,
+    "nativeWindows": 412,
     "countsMeaning": "Augmented rows include repeated, weighted, simplified/traditional and windowed views; not independent messages.",
     "evaluation": "docs/evaluation.md",
-    "applicationSourceCommit": "a45b58b32311340239d918b40a0877f0cc79fd8e",
-    "coreMLSHA256": "317fb694c4d81160af90ffeb87ceedc8e5f6e120442f3105b1b0ddcd90e31b49",
-    "pytorchSHA256": "61d26331428638cbcc32863f908bb68edad30446eb057efe092a8c187670db17"
+    "applicationSourceCommit": "59a8803047",
+    "coreMLSHA256": "cc22ed4e6b12635a72ebed20c407cd53d8a5af0d498884eb73ec9c082b401e10",
+    "pytorchSHA256": "1099f918bae20465fc71194bbdb596f515ee03fbd806e14afabf960d88f6664a"
   }
 }

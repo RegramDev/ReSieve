@@ -1,7 +1,7 @@
 {
   "name": "ReSieve",
-  "version": "1.1.0",
-  "sourceModelVersion": "2026-11-16.10",
+  "version": "1.3.0",
+  "sourceModelVersion": "2026-11-18.2",
   "architecture": "MiniRBT-H256-6L",
   "parameters": 10345730,
   "languages": [
@@ -12,7 +12,7 @@
     "content",
     "promotion"
   ],
-  "threshold": 0.99164,
+  "threshold": 0.9835,
   "sequenceLength": 128,
   "overlapTokens": 16,
   "maximumTokens": 1024,
@@ -22,7 +22,7 @@
   "aggregation": "minimum_window_probability",
   "coreml": {
     "file": "coreml/ReSieve.mlmodel",
-    "sha256": "317fb694c4d81160af90ffeb87ceedc8e5f6e120442f3105b1b0ddcd90e31b49",
+    "sha256": "cc22ed4e6b12635a72ebed20c407cd53d8a5af0d498884eb73ec9c082b401e10",
     "bytes": 20571001,
     "weightBits": 16,
     "computeUnits": "CPU_ONLY",
@@ -53,7 +53,7 @@
   },
   "pytorch": {
     "file": "pytorch/model.safetensors",
-    "sha256": "61d26331428638cbcc32863f908bb68edad30446eb057efe092a8c187670db17",
+    "sha256": "1099f918bae20465fc71194bbdb596f515ee03fbd806e14afabf960d88f6664a",
     "bytes": 41394928,
     "weightBits": 32
   },
@@ -66,7 +66,7 @@
     "name": "Regram",
     "version": "13.2",
     "build": 34660,
-    "sourceCommit": "a45b58b32311340239d918b40a0877f0cc79fd8e"
+    "sourceCommit": "59a8803047"
   },
   "scope": "Text-score classifier. App span selection, structural rules, entity preservation, media handling, and personal corrections are separate.",
   "normalization": {
